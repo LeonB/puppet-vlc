@@ -14,12 +14,12 @@
 #
 class vlc::params {
 
-	### Application related parameters
+  ### Application related parameters
 
-	$package_name = $::operatingsystem ? {
-		default => 'vlc'
-	}
+  $package_name = $::operatingsystem ? {
+    default => 'vlc'
+  }
 
-	$enabled = true
+  $enabled = true
 
 }

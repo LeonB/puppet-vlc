@@ -1,12 +1,12 @@
 class vlc(
-	$package_name = params_lookup( 'package_name' ),
-	$enabled       = params_lookup( 'enabled' )
-  ) inherits vlc::params {
+  $package_name = params_lookup( 'package_name' ),
+  $enabled       = params_lookup( 'enabled' )
+) inherits vlc::params {
 
-  	$ensure = $enabled ? {
-  		true => present,
-  		false => absent
-  	}
+    $ensure = $enabled ? {
+      true => present,
+      false => absent
+    }
 
-	include vlc::package, vlc::config
+  include vlc::package, vlc::config
 }
